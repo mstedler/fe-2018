@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +13,6 @@
     <!-- Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-
 <body>
     <nav class="nav-extended">
         <div class="nav-wrapper">
@@ -36,7 +34,7 @@
                         <h5>Identificador</h5>
                         <div class="row no-margin-bottom">
                             <div class="input-field col s12 m6 l4">
-                                <select id="tipo-identificador" name="tipo-identificador">
+                                <select id="tipo-identificador" name="identificador[tipo]">
                                     <option value="" disabled selected>Escolha uma opção</option>
                                     <option value="01">Único dentro da organização</option>
                                     <option value="02">Número do prontuário</option>
@@ -50,17 +48,17 @@
                                 <label>Tipo do identificador</label>
                             </div>
                             <div class="input-field col s12 m6 l4">
-                                <input id="designacao" type="text" class="validate" required>
-                                <label for="designacao">Designação</label>
+                                <input name="identificador[designacao]" id="designacao-identificador" type="text" class="validate" required>
+                                <label for="designacao-identificador">Designação</label>
                             </div>
                             <div class="input-field col s12 m6 l4">
-                                <input id="emissor" type="text" class="validate" required>
-                                <label for="emissor">Emissor</label>
+                                <input name="identificador[emissor]" id="emissor-identificador" type="text" class="validate" required>
+                                <label for="emissor-identificador">Emissor</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <select>
+                                <select name="identificador[area]">
                                     <option value="" disabled selected>Escolha uma opção</option>
                                     <option value="1">Local</option>
                                     <option value="2">Área/região/distrito</option>
@@ -70,15 +68,15 @@
                                 <label>Área geográfica</label>
                             </div>
                             <div class="input-field col s12 m6">
-                                <input id="dataEmissao" type="text" class="datepicker" required>
-                                <label for="dataEmissao" class="">Data de Emissão</label>
+                                <input name="identificador[data]" id="data-identificador" type="text" class="datepicker" required>
+                                <label for="data-identificador" class="">Data de Emissão</label>
                             </div>
                         </div>
                         <div id="certidao" class="hidden">
                             <h6>Certidão</h6>
                             <div class="row no-margin-bottom">
                                 <div class="input-field col s12 m6">
-                                    <select id="tipo-certidao" name="tipo-certidao" class="input">
+                                    <select id="tipo-certidao" name="certidao[tipo]" class="input">
                                         <option value="nascimento">Nascimento</option>
                                         <option value="casamento">Casamento</option>
                                         <option value="divorcio">Divórcio</option>
@@ -86,22 +84,22 @@
                                     <label>Tipo de certidão</label>
                                 </div>
                                 <div class="input-field col s12 m6">
-                                    <input name="nome-cartorio" id="nome-cartorio" type="text" class="validate">
-                                    <label for="nome-cartorio">Nome do cartório</label>
+                                    <input name="certidao[cartorio][nome]" id="nome-cartorio-certidao" type="text" class="validate">
+                                    <label for="nome-cartorio-certidao">Nome do cartório</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12 m4">
-                                    <input name="livro-cartorio" id="livro-cartorio" type="number" class="validate">
-                                    <label for="livro-cartorio">Livro</label>
+                                    <input name="certidao[cartorio][livro]" id="livro-cartorio-certidao" type="number" class="validate">
+                                    <label for="livro-cartorio-certidao">Livro</label>
                                 </div>
                                 <div class="input-field col s12 m4">
-                                    <input name="folha-cartorio" id="folha-cartorio" type="number" class="validate">
-                                    <label for="folha-cartorio">Folha</label>
+                                    <input name="certidao[cartorio][folha]" id="folha-cartorio-certidao" type="number" class="validate">
+                                    <label for="folha-cartorio-certidao">Folha</label>
                                 </div>
                                 <div class="input-field col s12 m4">
-                                    <input name="termo-cartorio" id="termo-cartorio" type="number" class="validate">
-                                    <label for="termo-cartorio">Termo</label>
+                                    <input name="certidao[cartorio][termo]" id="termo-cartorio-certidao" type="number" class="validate">
+                                    <label for="termo-cartorio-certidao">Termo</label>
                                 </div>
                             </div>
                         </div>
@@ -109,11 +107,11 @@
                             <h6>Carteira de Trabalho / Previdência Social</h6>
                             <div class="row no-margin-bottom">
                                 <div class="input-field col s12 m6">
-                                    <input name="serie-ctps" id="serie-ctps" type="number" class="validate">
+                                    <input name="ctps[serie]" id="serie-ctps" type="number" class="validate">
                                     <label for="serie-ctps">Série</label>
                                 </div>
                                 <div class="input-field col s12 m6">
-                                    <select id="select-estado">
+                                    <select name="ctps[estado]" id="estado-ctps">
                                         <option value="" disabled selected>Escolha uma opção</option>
                                         <option value="AC">Acre</option>
                                         <option value="AL">Alagoas</option>
@@ -151,28 +149,89 @@
                             <h6>Título de eleitor</h6>
                             <div class="row no-margin-bottom">
                                 <div class="input-field col s12 m6">
-                                    <input name="secao-eleitor" id="secao-eleitor" type="number" class="validate">
-                                    <label for="secao-eleitor">Seção eleitoral</label>
+                                    <input name="titulo[secao]" id="secao-titulo" type="number" class="validate">
+                                    <label for="secao-titulo">Seção eleitoral</label>
                                 </div>
                                 <div class="input-field col s12 m6">
-                                    <input name="zona-eleitor" id="zona-eleitor" type="number" class="validate">
-                                    <label for="zona-eleitor">Zona eleitoral</label>
+                                    <input name="titulo[zona]" id="zona-titulo" type="number" class="validate">
+                                    <label for="zona-titulo">Zona eleitoral</label>
                                 </div>
                             </div>
                         </div>
                         <div class="divider"></div>
                         <div id="nome">
                             <h5>Nome</h5>
-                            <div class="row no-margin-bottom">
-                                <div class="input-field col s12 m6">
-                                    <input name="secao-eleitor" id="secao-eleitor" type="number" class="validate">
-                                    <label for="secao-eleitor">Seção eleitoral</label>
-                                </div>
-                                <div class="input-field col s12 m6">
-                                    <input name="zona-eleitor" id="zona-eleitor" type="number" class="validate">
-                                    <label for="zona-eleitor">Zona eleitoral</label>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label>
+                                        <input name="nome[preferido]" type="checkbox" />
+                                        <span>Nome preferido</span>
+                                    </label>
                                 </div>
                             </div>
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6">
+                                    <input name="nome[nome]" id="nome-nome" type="text" class="validate" required>
+                                    <label for="nome-nome">Nome</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input name="nome[sobrenome]" id="sobrenome-nome" type="text" class="validate" required>
+                                    <label for="sobrenome-nome">Sobrenome</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <input placeholder="Prof., Dr., ..." name="nome[titulo]" id="titulo-nome" type="text" class="validate">
+                                    <label for="titulo-nome">Título</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input placeholder="Júnior, Filho" name="nome[sufixo]" id="sufixo-nome" type="text" class="validate">
+                                    <label for="sufixo-nome">Sufixo</label>
+                                </div>
+                            </div>
+                            <h6>Grupo de utilização</h6>
+                            <div class="row">
+                                <div class="input-field col s12 m3">
+                                    <select id="uso-grupo-utilizacao" name="grupoUtilizacao[uso]" class="input">
+                                        <option value="" disabled selected>Escolha uma opção</option>
+                                        <option value="1">Relatório (R)</option>
+                                        <option value="2">Nome de recém-nascido (N)</option>
+                                        <option value="3">Nome profissional ou comercial (C)</option>
+                                        <option value="4">Nome de solteiro (nascimento) (original)</option>
+                                        <option value="5">Nome registrado (nome legal)</option>
+                                        <option value="8">Outro nome (alias)</option>
+                                    </select>
+                                    <label>Uso</label>
+                                </div>
+                                <div class="input-field col s12 m3">
+                                    <select id="condicao-grupo-utilizacao" name="grupoUtilizacao[condicao]" class="input" required>
+                                        <option value="" disabled selected>Escolha uma opção</option>
+                                        <option value="1">Informação não confiável</option>
+                                        <option value="2">Nome com erro de digitação</option>
+                                        <option value="3">Nome para não ser usado</option>
+                                        <option value="4">Vínculo do nome proibido por lei</option>
+                                        <option value="6">Requisito de privacidade/segurança especial</option>
+                                        <option value="8">Nome temporário</option>
+                                    </select>
+                                    <label>Uso condicional</label>
+                                </div>
+                                <div class="input-field col s12 m2">
+                                    <input name="grupoUtilizacao[][dataInicio]" id="data-inicio-grupo-utilizacao" type="text" class="datepicker" required>
+                                    <label for="data-inicio-grupo-utilizacao" class="">Data de Início</label>
+                                </div>
+                                <div class="input-field col s12 m2">
+                                    <input name="grupoUtilizacao[][dataFim]" id="data-fim-grupo-utilizacao" type="text" class="datepicker" required>
+                                    <label for="data-fim-grupo-utilizacao" class="">Data de fim</label>
+                                </div>
+                                <div class="input-field col s12 m2">
+                                    <a onclick="M.toast({html: '``Novo grupo adicionado``'});scaleOutTimerIn(this, 500);" class="btn-floating btn-small waves-effect waves-light red scale-transition"><i
+                                            class="material-icons">add</i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div id="dados-demograficos">
+                            <h5>Dados demográficos</h5>
                         </div>
                     </form>
                 </div>
@@ -184,38 +243,7 @@
 
     <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.dropdown-trigger').dropdown();
-            $('.tabs').tabs();
-            $('select').formSelect();
-            $('.datepicker').datepicker({ format: "dd/mm/yyyy", autoClose: true, disableWeekends: true });
-
-            $("#tipo-identificador")
-                .change(function () {
-                    var str = "";
-                    $("#tipo-identificador option:selected").each(function () {
-                        switch ($(this).val()) {
-                            case "18":
-                                $("#titulo-eleitor, #certidao").hide();
-                                $("#ctps").show();
-                                break;
-                            case "19":
-                                $("#ctps, #certidao").hide();
-                                $("#titulo-eleitor").show();
-                                break;
-                            case "20":
-                                $("#ctps, #titulo-eleitor").hide();
-                                $("#certidao").show();
-                                break;
-                            default:
-                                $("#ctps, #titulo-eleitor, #certidao").hide();
-                                break;
-                        }
-                    });
-                });
-        });
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
