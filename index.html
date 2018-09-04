@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Portal</title>
+
+        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+
+        <!-- Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+    </head>
+    <body>
+        <nav class="nav-extended">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Portal</a>
+            </div>
+            <div class="nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="active" href="#cadastro">Cadastro</a></li>
+                    <li class="tab"><a href="#localizar">Localizar</a></li>
+                </ul>
+            </div>
+        </nav>
+                
+        <div id="cadastro" class="col s12">Cadastro</div>
+        <div id="localizar" class="col s12">Localizar</div>
+         
+        <script type="text/javascript" src="js/materialize.js"></script>
+        <script>
+            const el = document.querySelector('.tabs');
+            const instance = M.Tabs.init(el, {});
+        </script>
+    </body>
+</html>
