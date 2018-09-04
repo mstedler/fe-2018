@@ -1,38 +1,221 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Portal</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <title>Portal S</title>
 
-        <!-- Google Icon Font-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        
-    </head>
-    <body>
-        <nav class="nav-extended">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Portal</a>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" media="screen,projection" />
+
+    <!-- Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="nav-extended">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">Portal S</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="active" href="#cadastro">Cadastro</a></li>
+                <li class="tab"><a href="#localizar">Localizar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div id="cadastro">
+                    <form>
+                        <h5>Identificador</h5>
+                        <div class="row no-margin-bottom">
+                            <div class="input-field col s12 m6 l4">
+                                <select id="tipo-identificador" name="tipo-identificador">
+                                    <option value="" disabled selected>Escolha uma opção</option>
+                                    <option value="01">Único dentro da organização</option>
+                                    <option value="02">Número do prontuário</option>
+                                    <option value="18">Carteira de Trabalho e Previdência Social</option>
+                                    <option value="19">Titulo Eleitoral</option>
+                                    <option value="20">Certidão de Nascimento/Casamento/Divórcio</option>
+                                    <option value="21">Radiologia</option>
+                                    <option value="22">Patologia</option>
+                                    <option value="23">Farmácia</option>
+                                </select>
+                                <label>Tipo do identificador</label>
+                            </div>
+                            <div class="input-field col s12 m6 l4">
+                                <input id="designacao" type="text" class="validate" required>
+                                <label for="designacao">Designação</label>
+                            </div>
+                            <div class="input-field col s12 m6 l4">
+                                <input id="emissor" type="text" class="validate" required>
+                                <label for="emissor">Emissor</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 m6">
+                                <select>
+                                    <option value="" disabled selected>Escolha uma opção</option>
+                                    <option value="1">Local</option>
+                                    <option value="2">Área/região/distrito</option>
+                                    <option value="3">Estado/província/território</option>
+                                    <option value="4">Nacional</option>
+                                </select>
+                                <label>Área geográfica</label>
+                            </div>
+                            <div class="input-field col s12 m6">
+                                <input id="dataEmissao" type="text" class="datepicker" required>
+                                <label for="dataEmissao" class="">Data de Emissão</label>
+                            </div>
+                        </div>
+                        <div id="certidao" class="hidden">
+                            <h6>Certidão</h6>
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6">
+                                    <select id="tipo-certidao" name="tipo-certidao" class="input">
+                                        <option value="nascimento">Nascimento</option>
+                                        <option value="casamento">Casamento</option>
+                                        <option value="divorcio">Divórcio</option>
+                                    </select>
+                                    <label>Tipo de certidão</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input name="nome-cartorio" id="nome-cartorio" type="text" class="validate">
+                                    <label for="nome-cartorio">Nome do cartório</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12 m4">
+                                    <input name="livro-cartorio" id="livro-cartorio" type="number" class="validate">
+                                    <label for="livro-cartorio">Livro</label>
+                                </div>
+                                <div class="input-field col s12 m4">
+                                    <input name="folha-cartorio" id="folha-cartorio" type="number" class="validate">
+                                    <label for="folha-cartorio">Folha</label>
+                                </div>
+                                <div class="input-field col s12 m4">
+                                    <input name="termo-cartorio" id="termo-cartorio" type="number" class="validate">
+                                    <label for="termo-cartorio">Termo</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ctps" class="hidden">
+                            <h6>Carteira de Trabalho / Previdência Social</h6>
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6">
+                                    <input name="serie-ctps" id="serie-ctps" type="number" class="validate">
+                                    <label for="serie-ctps">Série</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <select id="select-estado">
+                                        <option value="" disabled selected>Escolha uma opção</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <label>Estado</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="titulo-eleitor" class="hidden">
+                            <h6>Título de eleitor</h6>
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6">
+                                    <input name="secao-eleitor" id="secao-eleitor" type="number" class="validate">
+                                    <label for="secao-eleitor">Seção eleitoral</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input name="zona-eleitor" id="zona-eleitor" type="number" class="validate">
+                                    <label for="zona-eleitor">Zona eleitoral</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div id="nome">
+                            <h5>Nome</h5>
+                            <div class="row no-margin-bottom">
+                                <div class="input-field col s12 m6">
+                                    <input name="secao-eleitor" id="secao-eleitor" type="number" class="validate">
+                                    <label for="secao-eleitor">Seção eleitoral</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <input name="zona-eleitor" id="zona-eleitor" type="number" class="validate">
+                                    <label for="zona-eleitor">Zona eleitoral</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                    <li class="tab"><a class="active" href="#cadastro">Cadastro</a></li>
-                    <li class="tab"><a href="#localizar">Localizar</a></li>
-                </ul>
-            </div>
-        </nav>
-                
-        <div id="cadastro" class="col s12">Cadastro</div>
-        <div id="localizar" class="col s12">Localizar</div>
-         
-        <script type="text/javascript" src="js/materialize.js"></script>
-        <script>
-            const el = document.querySelector('.tabs');
-            const instance = M.Tabs.init(el, {});
-        </script>
-    </body>
+        </div>
+    </div>
+    <div id="localizar" class="col s12 m6">Localizar</div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-trigger').dropdown();
+            $('.tabs').tabs();
+            $('select').formSelect();
+            $('.datepicker').datepicker({ format: "dd/mm/yyyy", autoClose: true, disableWeekends: true });
+
+            $("#tipo-identificador")
+                .change(function () {
+                    var str = "";
+                    $("#tipo-identificador option:selected").each(function () {
+                        switch ($(this).val()) {
+                            case "18":
+                                $("#titulo-eleitor, #certidao").hide();
+                                $("#ctps").show();
+                                break;
+                            case "19":
+                                $("#ctps, #certidao").hide();
+                                $("#titulo-eleitor").show();
+                                break;
+                            case "20":
+                                $("#ctps, #titulo-eleitor").hide();
+                                $("#certidao").show();
+                                break;
+                            default:
+                                $("#ctps, #titulo-eleitor, #certidao").hide();
+                                break;
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+
 </html>
