@@ -9,7 +9,6 @@ $(document).ready(function () {
     $('.tabs').tabs();
     $('select').formSelect();
     $('.datepicker').datepicker({ format: "dd/mm/yyyy", autoClose: true, disableWeekends: true });
-
     $("#tipo-identificador")
         .change(function () {
             $("#tipo-identificador option:selected").each(function () {
@@ -27,4 +26,15 @@ $(document).ready(function () {
                 }
             });
         });
+
+    $('input[type=radio][name=nacionalidade]').change(function () {
+        if (this.value == 'br') {
+            $("#estrangeiro").hide();
+            $("#brasileiro").show();
+        }
+        else if (this.value == 'es') {
+            $("#brasileiro").hide();
+            $("#estrangeiro").show();
+        }
+    });
 });
