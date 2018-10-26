@@ -1,0 +1,910 @@
+[
+    {
+      "codigo": 101,
+      "nome": "Afeganistão"
+    },
+    {
+      "codigo": 102,
+      "nome": "África do Sul"
+    },
+    {
+      "codigo": 103,
+      "nome": "Albânia"
+    },
+    {
+      "codigo": 104,
+      "nome": "Alemanha"
+    },
+    {
+      "codigo": 105,
+      "nome": "Andorra"
+    },
+    {
+      "codigo": 106,
+      "nome": "Angola"
+    },
+    {
+      "codigo": 107,
+      "nome": "Anguilla"
+    },
+    {
+      "codigo": 108,
+      "nome": "Antigua e Barbuda"
+    },
+    {
+      "codigo": 109,
+      "nome": "Antilhas Holandesas"
+    },
+    {
+      "codigo": 110,
+      "nome": "Arábia Saudita"
+    },
+    {
+      "codigo": 111,
+      "nome": "Argélia"
+    },
+    {
+      "codigo": 112,
+      "nome": "Argentina"
+    },
+    {
+      "codigo": 113,
+      "nome": "Armênia"
+    },
+    {
+      "codigo": 114,
+      "nome": "Aruba"
+    },
+    {
+      "codigo": 115,
+      "nome": "Austrália"
+    },
+    {
+      "codigo": 116,
+      "nome": "Áustria"
+    },
+    {
+      "codigo": 117,
+      "nome": "Azerbaijão"
+    },
+    {
+      "codigo": 118,
+      "nome": "Bahamas"
+    },
+    {
+      "codigo": 119,
+      "nome": "Bahrein"
+    },
+    {
+      "codigo": 120,
+      "nome": "Bangladesh"
+    },
+    {
+      "codigo": 121,
+      "nome": "Barbados"
+    },
+    {
+      "codigo": 122,
+      "nome": "Bélgica"
+    },
+    {
+      "codigo": 123,
+      "nome": "Belize"
+    },
+    {
+      "codigo": 124,
+      "nome": "Benin"
+    },
+    {
+      "codigo": 125,
+      "nome": "Bermudas"
+    },
+    {
+      "codigo": 126,
+      "nome": "Bielorússia"
+    },
+    {
+      "codigo": 127,
+      "nome": "Bolívia"
+    },
+    {
+      "codigo": 128,
+      "nome": "Bósnia e Herzegóvina"
+    },
+    {
+      "codigo": 129,
+      "nome": "Botswana"
+    },
+    {
+      "codigo": 130,
+      "nome": "Brunei"
+    },
+    {
+      "codigo": 131,
+      "nome": "Bulgária"
+    },
+    {
+      "codigo": 132,
+      "nome": "Burkina Faso"
+    },
+    {
+      "codigo": 133,
+      "nome": "Burundi"
+    },
+    {
+      "codigo": 134,
+      "nome": "Butão"
+    },
+    {
+      "codigo": 135,
+      "nome": "Cabo Verde"
+    },
+    {
+      "codigo": 136,
+      "nome": "Camarões"
+    },
+    {
+      "codigo": 137,
+      "nome": "Camboja"
+    },
+    {
+      "codigo": 138,
+      "nome": "Canadá"
+    },
+    {
+      "codigo": 139,
+      "nome": "Cazaquistão"
+    },
+    {
+      "codigo": 140,
+      "nome": "Chade"
+    },
+    {
+      "codigo": 141,
+      "nome": "Chile"
+    },
+    {
+      "codigo": 142,
+      "nome": "China"
+    },
+    {
+      "codigo": 143,
+      "nome": "Chipre"
+    },
+    {
+      "codigo": 144,
+      "nome": "Cingapura"
+    },
+    {
+      "codigo": 145,
+      "nome": "Colômbia"
+    },
+    {
+      "codigo": 146,
+      "nome": "Coréia do Norte"
+    },
+    {
+      "codigo": 147,
+      "nome": "Coréia do Sul"
+    },
+    {
+      "codigo": 148,
+      "nome": "Costa do Marfim"
+    },
+    {
+      "codigo": 149,
+      "nome": "Costa Rica"
+    },
+    {
+      "codigo": 150,
+      "nome": "Croácia"
+    },
+    {
+      "codigo": 151,
+      "nome": "Cuba"
+    },
+    {
+      "codigo": 152,
+      "nome": "Dinamarca"
+    },
+    {
+      "codigo": 153,
+      "nome": "Djibuti"
+    },
+    {
+      "codigo": 154,
+      "nome": "Dominica"
+    },
+    {
+      "codigo": 155,
+      "nome": "Egito"
+    },
+    {
+      "codigo": 156,
+      "nome": "El Salvador"
+    },
+    {
+      "codigo": 157,
+      "nome": "Emirados Árabes Unidos"
+    },
+    {
+      "codigo": 158,
+      "nome": "Equador"
+    },
+    {
+      "codigo": 159,
+      "nome": "Eritréia"
+    },
+    {
+      "codigo": 160,
+      "nome": "Eslováquia"
+    },
+    {
+      "codigo": 161,
+      "nome": "Eslovênia"
+    },
+    {
+      "codigo": 162,
+      "nome": "Espanha"
+    },
+    {
+      "codigo": 163,
+      "nome": "Estados Unidos"
+    },
+    {
+      "codigo": 164,
+      "nome": "Estônia"
+    },
+    {
+      "codigo": 165,
+      "nome": "Etiópia"
+    },
+    {
+      "codigo": 166,
+      "nome": "Fiji"
+    },
+    {
+      "codigo": 167,
+      "nome": "Filipinas"
+    },
+    {
+      "codigo": 168,
+      "nome": "Finlândia"
+    },
+    {
+      "codigo": 169,
+      "nome": "França"
+    },
+    {
+      "codigo": 170,
+      "nome": "Gabão"
+    },
+    {
+      "codigo": 171,
+      "nome": "Gâmbia"
+    },
+    {
+      "codigo": 172,
+      "nome": "Geórgia"
+    },
+    {
+      "codigo": 173,
+      "nome": "Ghana"
+    },
+    {
+      "codigo": 174,
+      "nome": "Gibraltar"
+    },
+    {
+      "codigo": 175,
+      "nome": "Granada"
+    },
+    {
+      "codigo": 176,
+      "nome": "Grécia"
+    },
+    {
+      "codigo": 177,
+      "nome": "Groenlândia"
+    },
+    {
+      "codigo": 178,
+      "nome": "Guadalupe"
+    },
+    {
+      "codigo": 179,
+      "nome": "Guam"
+    },
+    {
+      "codigo": 180,
+      "nome": "Guatemala"
+    },
+    {
+      "codigo": 181,
+      "nome": "Guiana"
+    },
+    {
+      "codigo": 182,
+      "nome": "Guiana Francesa"
+    },
+    {
+      "codigo": 183,
+      "nome": "Guiné"
+    },
+    {
+      "codigo": 184,
+      "nome": "Guiné Bissau"
+    },
+    {
+      "codigo": 185,
+      "nome": "Guiné Equatorial"
+    },
+    {
+      "codigo": 186,
+      "nome": "Haiti"
+    },
+    {
+      "codigo": 187,
+      "nome": "Holanda"
+    },
+    {
+      "codigo": 188,
+      "nome": "Honduras"
+    },
+    {
+      "codigo": 189,
+      "nome": "Hungria"
+    },
+    {
+      "codigo": 190,
+      "nome": "Iêmen"
+    },
+    {
+      "codigo": 191,
+      "nome": "Ilhas Cayman"
+    },
+    {
+      "codigo": 192,
+      "nome": "Ilhas Comores"
+    },
+    {
+      "codigo": 193,
+      "nome": "Ilhas Cook"
+    },
+    {
+      "codigo": 194,
+      "nome": "Ilhas Falkland (Malvinas)"
+    },
+    {
+      "codigo": 195,
+      "nome": "Ilhas Färoe"
+    },
+    {
+      "codigo": 196,
+      "nome": "Ilhas Marianas"
+    },
+    {
+      "codigo": 197,
+      "nome": "Ilhas Marshall"
+    },
+    {
+      "codigo": 198,
+      "nome": "Ilhas Pitcairn"
+    },
+    {
+      "codigo": 199,
+      "nome": "Ilhas Salomão"
+    },
+    {
+      "codigo": 200,
+      "nome": "Ilhas Turks e Caicos"
+    },
+    {
+      "codigo": 201,
+      "nome": "Ilhas Virgens Americanas"
+    },
+    {
+      "codigo": 202,
+      "nome": "Ilhas Virgens Britânicas"
+    },
+    {
+      "codigo": 203,
+      "nome": "Índia"
+    },
+    {
+      "codigo": 204,
+      "nome": "Indonésia"
+    },
+    {
+      "codigo": 205,
+      "nome": "Irã"
+    },
+    {
+      "codigo": 206,
+      "nome": "Iraque"
+    },
+    {
+      "codigo": 207,
+      "nome": "Irlanda"
+    },
+    {
+      "codigo": 208,
+      "nome": "Islândia"
+    },
+    {
+      "codigo": 209,
+      "nome": "Israel"
+    },
+    {
+      "codigo": 210,
+      "nome": "Itália"
+    },
+    {
+      "codigo": 211,
+      "nome": "Jamaica"
+    },
+    {
+      "codigo": 212,
+      "nome": "Japão"
+    },
+    {
+      "codigo": 213,
+      "nome": "Jordânia"
+    },
+    {
+      "codigo": 214,
+      "nome": "Kirguistão"
+    },
+    {
+      "codigo": 215,
+      "nome": "Kiribati"
+    },
+    {
+      "codigo": 216,
+      "nome": "Kuwait"
+    },
+    {
+      "codigo": 217,
+      "nome": "Laos"
+    },
+    {
+      "codigo": 218,
+      "nome": "Lesotho"
+    },
+    {
+      "codigo": 219,
+      "nome": "Letônia"
+    },
+    {
+      "codigo": 220,
+      "nome": "Líbano"
+    },
+    {
+      "codigo": 221,
+      "nome": "Libéria"
+    },
+    {
+      "codigo": 222,
+      "nome": "Líbia"
+    },
+    {
+      "codigo": 223,
+      "nome": "Liechtenstein"
+    },
+    {
+      "codigo": 224,
+      "nome": "Lituânia"
+    },
+    {
+      "codigo": 225,
+      "nome": "Luxemburgo"
+    },
+    {
+      "codigo": 226,
+      "nome": "Macau"
+    },
+    {
+      "codigo": 227,
+      "nome": "Macedônia"
+    },
+    {
+      "codigo": 228,
+      "nome": "Madagáscar"
+    },
+    {
+      "codigo": 229,
+      "nome": "Malaísia"
+    },
+    {
+      "codigo": 230,
+      "nome": "Malawi"
+    },
+    {
+      "codigo": 231,
+      "nome": "Maldivas"
+    },
+    {
+      "codigo": 232,
+      "nome": "Mali"
+    },
+    {
+      "codigo": 233,
+      "nome": "Malta"
+    },
+    {
+      "codigo": 234,
+      "nome": "Marrocos"
+    },
+    {
+      "codigo": 235,
+      "nome": "Martinica"
+    },
+    {
+      "codigo": 236,
+      "nome": "Maurício"
+    },
+    {
+      "codigo": 237,
+      "nome": "Mauritânia"
+    },
+    {
+      "codigo": 238,
+      "nome": "Mayotte"
+    },
+    {
+      "codigo": 239,
+      "nome": "México"
+    },
+    {
+      "codigo": 240,
+      "nome": "Mianmar"
+    },
+    {
+      "codigo": 241,
+      "nome": "Micronésia"
+    },
+    {
+      "codigo": 242,
+      "nome": "Moçambique"
+    },
+    {
+      "codigo": 243,
+      "nome": "Moldávia"
+    },
+    {
+      "codigo": 244,
+      "nome": "Mônaco"
+    },
+    {
+      "codigo": 245,
+      "nome": "Mongólia"
+    },
+    {
+      "codigo": 246,
+      "nome": "Montserrat"
+    },
+    {
+      "codigo": 247,
+      "nome": "Namíbia"
+    },
+    {
+      "codigo": 248,
+      "nome": "Nauru"
+    },
+    {
+      "codigo": 249,
+      "nome": "Nepal"
+    },
+    {
+      "codigo": 250,
+      "nome": "Nicarágua"
+    },
+    {
+      "codigo": 251,
+      "nome": "Níger"
+    },
+    {
+      "codigo": 252,
+      "nome": "Nigéria"
+    },
+    {
+      "codigo": 253,
+      "nome": "Niue"
+    },
+    {
+      "codigo": 254,
+      "nome": "Noruega"
+    },
+    {
+      "codigo": 255,
+      "nome": "Nova Caledônia"
+    },
+    {
+      "codigo": 256,
+      "nome": "Nova Zelândia"
+    },
+    {
+      "codigo": 257,
+      "nome": "Omã"
+    },
+    {
+      "codigo": 258,
+      "nome": "Palau"
+    },
+    {
+      "codigo": 259,
+      "nome": "Panamá"
+    },
+    {
+      "codigo": 260,
+      "nome": "Papua Nova Guiné"
+    },
+    {
+      "codigo": 261,
+      "nome": "Paquistão"
+    },
+    {
+      "codigo": 262,
+      "nome": "Paraguai"
+    },
+    {
+      "codigo": 263,
+      "nome": "Peru"
+    },
+    {
+      "codigo": 264,
+      "nome": "Polinésia Francesa"
+    },
+    {
+      "codigo": 265,
+      "nome": "Polônia"
+    },
+    {
+      "codigo": 266,
+      "nome": "Porto Rico"
+    },
+    {
+      "codigo": 267,
+      "nome": "Portugal"
+    },
+    {
+      "codigo": 268,
+      "nome": "Qatar"
+    },
+    {
+      "codigo": 269,
+      "nome": "Quênia"
+    },
+    {
+      "codigo": 270,
+      "nome": "Reino Unido (Grã Bretanha e Irlanda do Norte)"
+    },
+    {
+      "codigo": 271,
+      "nome": "República Centro Africana"
+    },
+    {
+      "codigo": 272,
+      "nome": "República Democrática do Congo"
+    },
+    {
+      "codigo": 273,
+      "nome": "República do Congo"
+    },
+    {
+      "codigo": 274,
+      "nome": "República Dominicana"
+    },
+    {
+      "codigo": 275,
+      "nome": "República Tcheca"
+    },
+    {
+      "codigo": 276,
+      "nome": "Reunião"
+    },
+    {
+      "codigo": 277,
+      "nome": "Romênia"
+    },
+    {
+      "codigo": 278,
+      "nome": "Ruanda"
+    },
+    {
+      "codigo": 279,
+      "nome": "Rússia"
+    },
+    {
+      "codigo": 280,
+      "nome": "Saara Ocidental"
+    },
+    {
+      "codigo": 281,
+      "nome": "Saint Pierre e Miquelon"
+    },
+    {
+      "codigo": 282,
+      "nome": "Samoa"
+    },
+    {
+      "codigo": 283,
+      "nome": "Samoa Americana"
+    },
+    {
+      "codigo": 284,
+      "nome": "San Marino"
+    },
+    {
+      "codigo": 285,
+      "nome": "Santa Helena"
+    },
+    {
+      "codigo": 286,
+      "nome": "Santa Lúcia"
+    },
+    {
+      "codigo": 287,
+      "nome": "São Cristóvão e Nevis"
+    },
+    {
+      "codigo": 288,
+      "nome": "São Tomé e Príncipe"
+    },
+    {
+      "codigo": 289,
+      "nome": "São Vicente e Granadinas"
+    },
+    {
+      "codigo": 290,
+      "nome": "Senegal"
+    },
+    {
+      "codigo": 291,
+      "nome": "Serra Leoa"
+    },
+    {
+      "codigo": 292,
+      "nome": "Seychelles"
+    },
+    {
+      "codigo": 293,
+      "nome": "Síria"
+    },
+    {
+      "codigo": 294,
+      "nome": "Somália"
+    },
+    {
+      "codigo": 295,
+      "nome": "Sri Lanka"
+    },
+    {
+      "codigo": 296,
+      "nome": "Suazilândia"
+    },
+    {
+      "codigo": 297,
+      "nome": "Sudão"
+    },
+    {
+      "codigo": 298,
+      "nome": "Suécia"
+    },
+    {
+      "codigo": 299,
+      "nome": "Suíça"
+    },
+    {
+      "codigo": 300,
+      "nome": "Suriname"
+    },
+    {
+      "codigo": 301,
+      "nome": "Tadjiquistão"
+    },
+    {
+      "codigo": 302,
+      "nome": "Tailândia"
+    },
+    {
+      "codigo": 303,
+      "nome": "Taiwan"
+    },
+    {
+      "codigo": 304,
+      "nome": "Tanzânia"
+    },
+    {
+      "codigo": 305,
+      "nome": "Timor Leste"
+    },
+    {
+      "codigo": 306,
+      "nome": "Togo"
+    },
+    {
+      "codigo": 307,
+      "nome": "Tokelau"
+    },
+    {
+      "codigo": 308,
+      "nome": "Tonga"
+    },
+    {
+      "codigo": 309,
+      "nome": "Trinidad e Tobago"
+    },
+    {
+      "codigo": 310,
+      "nome": "Tunísia"
+    },
+    {
+      "codigo": 311,
+      "nome": "Turcomênia"
+    },
+    {
+      "codigo": 312,
+      "nome": "Turquia"
+    },
+    {
+      "codigo": 313,
+      "nome": "Tuvalu"
+    },
+    {
+      "codigo": 314,
+      "nome": "Ucrânia"
+    },
+    {
+      "codigo": 315,
+      "nome": "Uganda"
+    },
+    {
+      "codigo": 316,
+      "nome": "Uruguai"
+    },
+    {
+      "codigo": 317,
+      "nome": "Uzbequistão"
+    },
+    {
+      "codigo": 318,
+      "nome": "Vanuatu"
+    },
+    {
+      "codigo": 319,
+      "nome": "Vaticano"
+    },
+    {
+      "codigo": 320,
+      "nome": "Venezuela"
+    },
+    {
+      "codigo": 321,
+      "nome": "Vietnam"
+    },
+    {
+      "codigo": 322,
+      "nome": "Yugoslavia"
+    },
+    {
+      "codigo": 323,
+      "nome": "Zâmbia"
+    },
+    {
+      "codigo": 324,
+      "nome": "Zimbabwe"
+    },
+    {
+      "codigo": 777,
+      "nome": "APÁTRIDA"
+    },
+    {
+      "codigo": 888,
+      "nome": "OUTRAS NACIONALIDADES"
+    },
+    {
+      "codigo": 999,
+      "nome": "IGNORADO"
+    }
+  ]
