@@ -1,3 +1,7 @@
+var paises = '../util/paises.json';
+var estados = '../util/estados.json';
+var municipios = "../util/municipios.json";
+
 function scaleOutTimerIn(element, time) {
     $(element).toggleClass("scale-out");
     setTimeout(function () {
@@ -45,7 +49,7 @@ $(document).ready(function () {
                         $("#bairro-endereco").val(dados.bairro);
                         $('#estado-endereco option[value="' + dados.uf + '"]').prop('selected', true);
                         $('#estado-endereco').formSelect();
-                        preencheSelect("#municipio-endereco", "util/municipios.json", "data[i].uf == '" + dados.uf + "'");
+                        preencheSelect("#municipio-endereco", municipios, "data[i].uf == '" + dados.uf + "'");
                         setTimeout(function () {
                             $('#municipio-endereco option[value="' + dados.ibge + '"]').prop('selected', true);
                             $('#municipio-endereco').formSelect();
@@ -93,12 +97,12 @@ $(document).ready(function () {
 
     $("#estado-nacionalidade-dados")
         .change(function () {
-            preencheSelect("#municipio-nacionalidade-dados", "util/municipios.json", "data[i].uf == '" + $(this).val() + "'");
+            preencheSelect("#municipio-nacionalidade-dados", municipios, "data[i].uf == '" + $(this).val() + "'");
         });
 
     $("#estado-endereco")
         .change(function () {
-            preencheSelect("#municipio-endereco", "util/municipios.json", "data[i].uf == '" + $(this).val() + "'");
+            preencheSelect("#municipio-endereco", municipios, "data[i].uf == '" + $(this).val() + "'");
         });
 
     $('input[type=radio][name=nacionalidade]').change(function () {
@@ -126,9 +130,9 @@ $(document).ready(function () {
         }
     });
 
-    preencheSelect("#pais-endereco", 'util/paises.json', "true");
-    preencheSelect("#estado-ctps", 'util/estados.json', "true");
-    preencheSelect("#estado-endereco", 'util/estados.json', "true");
-    preencheSelect("#pais-nacionalidade-dados", 'util/paises.json', "true");
-    preencheSelect("#estado-nacionalidade-dados", 'util/estados.json', "true");
+    preencheSelect("#pais-endereco", paises , "true");
+    preencheSelect("#estado-ctps", estados, "true");
+    preencheSelect("#estado-endereco", estados, "true");
+    preencheSelect("#pais-nacionalidade-dados", paises, "true");
+    preencheSelect("#estado-nacionalidade-dados", estados, "true");
 });
