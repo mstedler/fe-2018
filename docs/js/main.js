@@ -32,7 +32,6 @@ function limpaEndereco() {
 }
 
 $(document).ready(function () {
-
     $("#cep-endereco").blur(function () {
         if($('input[name="endereco[radio-pais]"]:checked').val() == "es")
             return;
@@ -94,7 +93,18 @@ $(document).ready(function () {
                 }
             });
         });
+		
+	
 
+	$("#relacionamento-vinculos").change(function () {
+		var naobiologicos = [ "22", "262", "263", "264", "265" ];
+		if(naobiologicos.includes($(this).val())) {
+			$("#datas-vinculo").show();
+		} else {
+			$("#datas-vinculo").hide();
+		}
+    });
+		
     $("#estado-nacionalidade-dados")
         .change(function () {
             preencheSelect("#municipio-nacionalidade-dados", municipios, "data[i].uf == '" + $(this).val() + "'");
