@@ -212,11 +212,29 @@
                                     <label for="data-fim-grupo-utilizacao" class="">Data de fim</label>
                                 </div>
                                 <div class="input-field col s12 m2">
-                                    <a onclick="M.toast({html: '``Novo grupo adicionado``'});scaleOutTimerIn(this, 500);"
+                                    <a onclick="addToTableGrupoUtilizacao();scaleOutTimerIn(this, 500);"
                                         class="btn-floating btn-small waves-effect waves-light red scale-transition"><i
                                             class="material-icons">add</i></a>
                                 </div>
                             </div>
+                        </div>
+                        <div class="row no-margin-bottom">
+                            <div class="col s12">
+                                <table id="table-grupo-utilizacao" class="highlight">
+                                    <thead>
+                                    <tr>
+                                        <th>Uso</th>
+                                        <th>Condicional</th>
+                                        <th>Data Início</th>
+                                        <th>Data Fim</th>
+                                    </tr>
+                                    </thead>
+                            
+                                    <tbody>
+                                    
+                                    </tbody>
+                                </table>    
+                            </div>                    
                         </div>
                         <div class="divider"></div>
                         <div id="dados-demograficos">

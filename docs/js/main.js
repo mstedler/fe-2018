@@ -31,6 +31,31 @@ function limpaEndereco() {
     $('select').formSelect();
 }
 
+function addToTableGrupoUtilizacao(){
+    var uso = $("#uso-grupo-utilizacao");
+    var condicao = $("#condicao-grupo-utilizacao");
+    var dataI = $("#data-inicio-grupo-utilizacao");
+    var dataF = $("#data-fim-grupo-utilizacao");
+    var template = 
+    [
+        "<tr>", 
+            "<td>",
+            uso.find(":selected").text(),
+            "</td>",
+            "<td>",
+            condicao.find(":selected").text(),
+            "</td>",
+            "<td>",
+            dataI.val(),
+            "</td>",
+            "<td>",
+            dataF.val(),
+            "</td>",
+        "</tr>"
+    ];
+    $("#table-grupo-utilizacao").find('tbody').append(template.join(''));
+}
+
 $(document).ready(function () {
     $("#cep-endereco").blur(function () {
         if($('input[name="endereco[radio-pais]"]:checked').val() == "es")
