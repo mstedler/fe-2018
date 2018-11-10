@@ -1,6 +1,8 @@
 var paises = 'util/paises.json';
 var estados = 'util/estados.json';
 var municipios = "util/municipios.json";
+var removeRowBtn = '<a onclick="removeClosest(this, \'tr\', \'tbody\');"class="btn-floating btn-small waves-effect waves-light red scale-transition"><i class="material-icons">remove</i></a>'
+var removeLiBtn = '<a style="margin-top: 10px;" onclick="removeClosest(this, \'li\');"class="btn btn-small waves-effect waves-light red scale-transition">Remover</a>'
 
 function scaleOutTimerIn(element, time) {
     $(element).toggleClass("scale-out");
@@ -30,12 +32,22 @@ function limpaEndereco() {
     $('#estado-endereco option[value=""]').prop('selected', true);
     $('select').formSelect();
 }
-
+function removeClosest(element, closest, parent) {
+    var parent = $(element).closest(parent);
+    $(element).closest(closest).remove();
+    checkEmptyness(parent);
+}
+function checkEmptyness(element) {
+    if(element.children().length <= 0){
+         element.parent().hide(); 
+    }
+}
 function addToTableGrupoUtilizacao(){
     var uso = $("#uso-grupo-utilizacao");
     var condicao = $("#condicao-grupo-utilizacao");
     var dataI = $("#data-inicio-grupo-utilizacao");
     var dataF = $("#data-fim-grupo-utilizacao");
+    var table = $("#table-grupo-utilizacao");
     var template = 
     [
         "<tr>", 
@@ -50,10 +62,104 @@ function addToTableGrupoUtilizacao(){
             "</td>",
             "<td>",
             dataF.val(),
+            "</td>","<td>",
+            removeRowBtn,
             "</td>",
         "</tr>"
     ];
-    $("#table-grupo-utilizacao").find('tbody').append(template.join(''));
+    uso.val('');
+    uso.formSelect();
+    condicao.val('');
+    condicao.formSelect();
+    dataI.val('');
+    dataF.val('');
+    table.find('tbody').append(template.join(''));
+    table.show();
+}
+
+function addToTableRepresentacaoAlternativa(){
+    var input = $("#representacao-alternativa-nome");
+    var table = $("#table-representacao-alternativa");
+    var template = 
+    [
+        "<tr>", 
+            "<td>",
+            input.val(),
+            "</td>",
+            "<td>",
+            removeRowBtn,
+            "</td>",
+        "</tr>"
+    ];
+    input.val('');
+    table.find('tbody').append(template.join(''));
+    table.show();
+}
+
+function addToTableComunicacaoEletronica() {
+    var meio = $("#meio-comunicacoes");
+    var preferencia = $("#preferencia-comunicacoes");
+    var utilizacao = $("#utilizacao-comunicacoes");
+    var informacao = $("#informacao-comunicacoes");
+    var table = $("#table-comunicacao-eletronica");
+    var template = [
+        "<tr>", 
+            "<td>",
+            meio.find(":selected").text(),
+            "</td>",
+            "<td>",
+            informacao.val(),
+            "</td>",
+            "<td>",
+            preferencia.find(":selected").text(),
+            "</td>",
+            "<td>",
+            utilizacao.find(":selected").text(),
+            "</td>","<td>",
+            removeRowBtn,
+            "</td>",
+        "</tr>"
+    ];
+    table.find('tbody').append(template.join(''));
+    table.show();
+}
+
+function addNome() {
+    var primeiro = $("#primeiro-nome");
+    var sobrenome = $("#sobrenome-nome");
+    var titulo = $("#titulo-nome");
+    var nomes = $("#nomes");
+    
+    var tableRA = $("#table-representacao-alternativa");
+    var tableGU = $("#table-grupo-utilizacao");
+    
+    var divRA = tableRA.parent().clone(true);
+    var divGU = tableGU.parent().clone(true);
+
+    var template = [
+        '<li style="display:inline">',
+            '<div class="collapsible-header">',
+                '<div style="width: 100%; height: 100%;">',
+                    '<span style="float-left">' + titulo.val() + ' ' + primeiro.val() + ' ' + sobrenome.val() + '</span>',
+                    '<label style="float: right;"><input class="with-gap" name="group3" type="radio" checked /><span>Preferido</span></label>',
+                '</div>',
+            '</div>',
+            '<div class="collapsible-body">',
+                divRA.html(),
+                divGU.html(),
+                removeLiBtn,
+            '</div>',
+        '</li>'
+    ];
+    
+    tableRA.find("tbody").empty();
+    tableGU.find("tbody").empty();
+    
+    tableRA.hide();
+    tableGU.hide();
+    
+    nomes.append(template.join(''));
+    nomes.show();
 }
 
 $(document).ready(function () {
@@ -95,7 +201,7 @@ $(document).ready(function () {
             limpaEndereco();
         }
     });
-
+    $('.collapsible').collapsible();
     $('.dropdown-trigger').dropdown();
     $('.tabs').tabs();
     $('select').formSelect();
